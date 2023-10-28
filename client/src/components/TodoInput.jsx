@@ -1,5 +1,5 @@
 export default function TodoInput() {
   return (
-    <h1>To do 1</h1>
+    <h1 className="text-center"> do 1</h1>
   )
 }
