@@ -16,12 +16,12 @@ function TodoList() {
       .catch((error) => {
         console.error(error);
       });
-  }, []); // Pass an empty array as a dependency to run only once
+  }, [items]); // Runs every time a new item is added
 
   // Return a JSX element that renders the list of items using map method
   return (
     <div>
-        <h1>List of todo's is given below</h1>
+        <h1>List of todos is given below</h1>
     <ul>
       {items.map((item) => (
         <li key={item.todo_id}>{item.description}</li>
