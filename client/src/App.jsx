@@ -1,13 +1,13 @@
 import { Fragment } from 'react';
 import './App.css';
-import TodoInput from './components/TodoInput';
 import FormComponent from './components/FormComponent';'./components/FormComponent';
+import TodoList from './components/TodoList';
 function App() {
 
   return (
     <Fragment>
       <FormComponent/>
-     <TodoInput />
+     <TodoList/>
 
     </Fragment>
   )
