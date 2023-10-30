@@ -25,7 +25,7 @@ function TodoList() {
     <tbody>
       {items.map((item) => (
         // eslint-disable-next-line react/jsx-key
-        <tr>
+        <tr key={item.todo_id}>
         <td className="mx-3">{item.description}</td>
         <td className="mx-3"><button className="mx-3">Edit</button></td>
         <td className="mx-3"><button className="mx-3">Delete</button></td>
