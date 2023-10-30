@@ -22,11 +22,16 @@ function TodoList() {
   return (
     <div>
         <h1>List of todos is given below</h1>
-    <ul>
+    <tbody>
       {items.map((item) => (
-        <li key={item.todo_id}>{item.description}</li>
+        // eslint-disable-next-line react/jsx-key
+        <tr>
+        <td className="mx-3">{item.description}</td>
+        <td className="mx-3"><button className="mx-3">Edit</button></td>
+        <td className="mx-3"><button className="mx-3">Delete</button></td>
+        </tr>
       ))}
-    </ul>
+    </tbody>
     </div>
   );
 }
