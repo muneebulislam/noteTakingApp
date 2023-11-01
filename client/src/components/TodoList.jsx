@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import TodoDelete from "./TodoDelete";
 function TodoList() {
   // Initialize an empty array as a state variable
   const [items, setItems] = useState([]);
@@ -16,7 +16,7 @@ function TodoList() {
       .catch((error) => {
         console.error(error);
       });
-  }, [items]); // Runs every time a new item is added
+  }, []); // Runs every time a new item is added
 
   // Return a JSX element that renders the list of items using map method
   return (
@@ -27,8 +27,8 @@ function TodoList() {
         // eslint-disable-next-line react/jsx-key
         <tr key={item.todo_id}>
         <td className="mx-3">{item.description}</td>
-        <td className="mx-3"><button className="mx-3">Edit</button></td>
-        <td className="mx-3"><button className="mx-3">Delete</button></td>
+        <td className="mx-3">Edit</td>
+        <td className="mx-3"><TodoDelete id={ item.todo_id }/></td>
         </tr>
       ))}
     </tbody>
